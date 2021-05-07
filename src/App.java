@@ -7,10 +7,10 @@ public class App {
     private static ArrayList<ArrayList<Point>> clusters = new ArrayList<ArrayList<Point>>();
     private static ArrayList<Point> Given = new ArrayList<Point>(), centroids = new ArrayList<Point>();
     private static int k = 0;
+    private static Scanner sc;
 
 
     private static void workItOut(){//this is the actual work
-        Scanner sc = new Scanner(System.in);
         boolean continueReading;
         do {//first asking about number of clusters
             continueReading = false;//sooo asking until k is valid ... obvious work
@@ -88,7 +88,6 @@ public class App {
 
         int iterationNumber = 1;//counting number of iterations as mentioned in the given but it wasn't mentioned to actually output it idk y
         while (true) {//always looping until broken
-            System.out.println("loop");
             // initializing clusters
             clusters.clear();
             for (Point point : centroids) {
@@ -159,10 +158,10 @@ public class App {
     }
     public static void getParamsFrom_file(java.io.File file){//gets dataset from the file created from geogebra java class
         try{
-            Scanner sc = new Scanner(file);
+            Scanner scf = new Scanner(file);
             boolean continueReading;
             do {
-                String input = sc.nextLine();
+                String input = scf.nextLine();
                 continueReading = !input.toLowerCase().equals("end");
                 if (continueReading) {
                     input = input.replaceAll("\\s", "");
@@ -178,13 +177,12 @@ public class App {
                     }
                 }
             } while (continueReading);
-            sc.close();
+            scf.close();
         }catch(Exception e){
 
         }
     }
     private static void getParamsFrom_stdIn(){//getting dataset points from stdin doesn't rly need comments does it!!
-        Scanner sc = new Scanner(System.in);
         boolean continueReading;
         System.out.println("Enter end to stop giving data");
         do {
@@ -205,7 +203,6 @@ public class App {
                 }
             }
         } while (continueReading);
-        sc.close();
     }
     private static boolean SameCentroids(ArrayList<Point> centroids1,ArrayList<Point> centroids2){
         //this is called to stop the loop of changing centroids when centroids of the loop before is the same as the current one
@@ -218,6 +215,7 @@ public class App {
         return true;
     }
     public static void main(String[] args) throws Exception {
+        sc = new Scanner(System.in);
         //i have two modes one if it was run by geogebra extracted points and the other takes input from geogebra
         if(args == null)//if not run from user directly (called from geogebra class)
         {
@@ -227,6 +225,7 @@ public class App {
         else
             getParamsFrom_stdIn();
         workItOut();
+        sc.close();
     }
 }
 //if you have questions i hope you contact me anywhere

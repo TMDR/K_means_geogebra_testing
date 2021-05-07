@@ -21,6 +21,6 @@ if len(sys.argv) == 3:
             cont = False
         except:
             cont = True
-    text_file = open("points_element_in_page.txt", "w")
+    text_file = open("points_element_in_page.txt", "w", encoding="utf8")
     n = text_file.write(element.get_attribute('innerHTML'))
     text_file.close() #writing that html content of that div into a file for java to extract points from
