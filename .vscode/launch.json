@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch create_set_of_point_from_geogebra",
+            "request": "launch",
+            "mainClass": "create_set_of_point_from_geogebra",
+            "projectName": "K_means_22b5c9cc"
+        },
+        {
+            "type": "java",
+            "name": "Launch create_set_of_point_from_geogebra",
+            "request": "launch",
+            "mainClass": "create_set_of_point_from_geogebra",
+            "projectName": "K_means_c0d6ede0"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "K_means_c0d6ede0"
+        },
+        {
+            "type": "java",
+            "name": "Launch geogebra",
+            "request": "launch",
+            "mainClass": "geogebra",
+            "projectName": "K_means_c0d6ede0"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "K_means_22b5c9cc"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "geogebra",
+            "projectName": "K_means_22b5c9cc"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
