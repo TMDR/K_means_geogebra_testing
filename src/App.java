@@ -146,6 +146,7 @@ public class App {
             previousCentroids = new ArrayList<>();
             previousCentroids.addAll(centroids);//previous centroids for the next iteration are the current centroids...
         }
+        System.out.println("the algo took "+iterationNumber+" iterations");
         for (ArrayList<Point> cluster : clusters) {//finally printing clusters come in nice view and structure
             System.out.print("Cluster "+(clusters.indexOf(cluster) + 1)+" : [");
             for (Point point : cluster) {
