@@ -30,9 +30,7 @@ public class create_set_of_point_from_geogebra{//this is meant to do the same as
             psc.close();
             System.out.println("retrying");//an error happened could be anything
         }
-        System.out.println("before path");
         Path filePath = Paths.get("./points_element_in_page.txt");//this is the path to the file created from python containg html needed to get points
-        System.out.println("after path");
         String content = Files.readString(filePath, StandardCharsets.UTF_8);//html to string
         int i;
         String s = filePath.getParent().toAbsolutePath().toString();
